@@ -1,12 +1,12 @@
-var server = require('./src/server-bootstrap')
+var server = require('../')
 var config = require('./server-config')
 
 // Rutas
 config = config || {}
 config.routers = config.routers  || {} 
 
-config.routers['/myapp'] =  require('./src/router/sample-router')
-config.routers['/'] = require('./src/router/test-router')
+config.routers['/myapp'] =  require('./router/sample-router')
+config.routers['/'] = require('../src/router/test-router')
 
 
 // Se inicia el servidor

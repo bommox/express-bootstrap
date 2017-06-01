@@ -1,8 +1,8 @@
 {
-  "name": "innovation-assistant",
-  "version": "1.0.0",
+  "name": "express-bootstrap",
+  "version": "1.0.1",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
@@ -10,13 +10,13 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node test/server.js",
     "serve": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab-val.es.capgemini.com:jblomdah/innovation-assistant.git"
+    "url": "https://github.com/bommox/express-bootstrap.git"
   },
-  "author": "jblomdah",
+  "author": "bommox",
   "license": "ISC"
 }

@@ -1,5 +1,5 @@
-var server = require('../')
-var config = require('./server-config')
+const server = require('../')
+let config = require('./server-config')
 
 // Rutas
 config = config || {}
@@ -10,8 +10,10 @@ config.routers['/'] = require('../src/router/test-router')
 
 
 // Se inicia el servidor
-server.bootstrap(config).then(app => {
-    // callback
+async function start() {
+    const app = await server(config).start()        
     console.log("SERVER STARTED - PARAMS")
     console.log(JSON.stringify(app.locals))
-}).catch(e => console.error("Error starting server : " + e))
+}
+
+start()
